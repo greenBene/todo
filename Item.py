@@ -4,7 +4,7 @@ import sqlite3
 class Item:
     database_table_creation_sql = \
         '''
-        CREATE TABLE items (
+        CREATE TABLE IF NOT EXISTS items (
             item_id INTEGER PRIMARY KEY,
             user_id INTEGER,
             name TEXT NOT NULL,
